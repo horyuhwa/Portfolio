@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE  mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="feed">
+<insert id="new_feed" parameterType="com.project.sns.dto.FeedDTO" useGeneratedKeys="true" keyProperty="feed_id">
+	<![CDATA[{ call new_feed(
+		#{feed_content},
+		#{feed_user_id}
+		)}
+	]]>
+</insert>
+
+<select id="get_feed_max" resultType="integer">
+	<![CDATA[
+		select max(feed_last_feed_id) from feed
+	]]>
+</select>
+
+<insert id="file_upload" parameterType="HashMap">
+	<![CDATA[
+		insert into file_table (original_name, file_name, file_size, feed_id)
+		values
+		(#{original_name}, #{file_name}, #{file_size}, #{feed_id})
+	]]>
+</insert>
+
+<select id="get_feed" parameterType="string" resultType="com.project.sns.dto.FeedDTO">
+	<![CDATA[
+		select * from feed order by feed_id desc
+	]]>
+</select>
+
+<select id="get_upload_file" resultType="com.project.sns.dto.UploadFileDTO">
+	<![CDATA[
+		select * from file_table
+	]]>
+</select>
+
+<select id="get_feed_upload_file" resultType="com.project.sns.dto.UploadFileDTO">
+	<![CDATA[
+		select * from file_table where feed_id = #{feed_id}
+	]]>
+</select>
+
+<insert id="new_comment" statementType="CALLABLE" parameterType="com.project.sns.dto.CommentDTO">
+	<![CDATA[
+		{ call insert_comment(
+		#{comment_feed_id},
+		#{comment_user_id},
+		#{comment_content}
+		)
+		}
+	]]>
+</insert>
+
+<select id="get_comment" resultType="com.project.sns.dto.CommentDTO">
+	<![CDATA[
+		select * from comment order by comment_created_at
+	]]>
+</select>
+
+<delete id="delete_comment" parameterType="hashMap">
+	<![CDATA[
+		{ call delete_comment(
+		#{comment_id},
+		#{comment_feed_id}
+		)
+		}
+	]]>
+</delete>
+
+<delete id="delete_feed" parameterType="string">
+	<![CDATA[
+		{ call delete_file(
+		#{feed_id}
+		)
+		}
+	]]>
+</delete>
+
+<select id="get_feed_by_id" parameterType="string" resultType="com.project.sns.dto.FeedDTO">
+	<![CDATA[
+		select * from feed where feed_id = #{feed_id}
+	]]>
+</select>
+
+<update id="modify_feed" parameterType="hashMap">
+	<![CDATA[
+		update feed set feed_content = #{feed_content} where feed_id = #{feed_id}	
+	]]>
+</update>
+
+<select id="get_user_profile" resultType="com.project.sns.dto.ProfileDTO">
+	<![CDATA[
+		select * from profile_table;
+	]]>
+</select>
+
+</mapper>
