@@ -1,0 +1,11 @@
+C:\Users\Lumectum\Documents\GitHub\LionsFolder\HmCsharp\useAPI\APISun\bin\Debug\APISun.exe.config
+C:\Users\Lumectum\Documents\GitHub\LionsFolder\HmCsharp\useAPI\APISun\bin\Debug\APISun.exe
+C:\Users\Lumectum\Documents\GitHub\LionsFolder\HmCsharp\useAPI\APISun\bin\Debug\APISun.pdb
+C:\Users\Lumectum\Documents\GitHub\LionsFolder\HmCsharp\useAPI\APISun\obj\Debug\APISun.csproj.AssemblyReference.cache
+C:\Users\Lumectum\Documents\GitHub\LionsFolder\HmCsharp\useAPI\APISun\obj\Debug\APISun.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lumectum\Documents\GitHub\LionsFolder\HmCsharp\useAPI\APISun\obj\Debug\APISun.Form1.resources
+C:\Users\Lumectum\Documents\GitHub\LionsFolder\HmCsharp\useAPI\APISun\obj\Debug\APISun.Properties.Resources.resources
+C:\Users\Lumectum\Documents\GitHub\LionsFolder\HmCsharp\useAPI\APISun\obj\Debug\APISun.csproj.GenerateResource.cache
+C:\Users\Lumectum\Documents\GitHub\LionsFolder\HmCsharp\useAPI\APISun\obj\Debug\APISun.csproj.CoreCompileInputs.cache
+C:\Users\Lumectum\Documents\GitHub\LionsFolder\HmCsharp\useAPI\APISun\obj\Debug\APISun.exe
+C:\Users\Lumectum\Documents\GitHub\LionsFolder\HmCsharp\useAPI\APISun\obj\Debug\APISun.pdb
